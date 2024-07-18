@@ -1,19 +1,23 @@
-let a = 50;
-let b = 10;
+/* global console */
+/* eslint-disable id-length */
+/* eslint-disable one-var */
 
-let sum = a + b;
+let a = 50;
+const b = 10;
+
+const sum = a + b;
 console.log(`${a} + ${b} = ${sum}`);
 
-let sub = a - b;
+const sub = a - b;
 console.log(`${a} - ${b} = ${sub}`);
 
-let mult = a * b;
+const mult = a * b;
 console.log(`${a} * ${b} = ${mult}`);
 
-let div = a / b;
+const div = a / b;
 console.log(`${a} / ${b} = ${div}`);
 
-let rem = a % b;
+const rem = a % b;
 console.log(`${a} % ${b} = ${rem}`);
 
 a += 50;
@@ -35,52 +39,60 @@ console.log(`${b} > 10  Result: ${b > 10}`);
 console.log(`${b} >= 10  Result: ${b >= 10}`);
 console.log("");
 
-b_str = '10';
-console.log(`Number ${b} == String ${b_str} Result: ${b == b_str}`);
-console.log(`Number ${b} === String ${b_str} Result: ${b === b_str}`);
+const bStr = '10';
+
+/* eslint-disable eqeqeq */
+console.log(`Number ${b} == String ${bStr} Result: ${b == bStr}`);
+/* eslint-enable eqeqeq */
+
+console.log(`Number ${b} === String ${bStr} Result: ${b === bStr}`);
 console.log("");
 
 let c = 20;
-let d = 30;
+const d = 30;
 
-if (c == 20 || c == 20+1) {
+if (c === 20 || c === 20+1) {
     console.log(`operator OR: Passed`);
 } else {
     console.log(`operator OR: Failed`);
 }
 
-if (c == 20+1 || c == 20+2) {
+if (c === 20+1 || c === 20+2) {
     console.log(`operator OR: Passed`);
 } else {
     console.log(`operator OR: Failed`);
 }
 
-if (c == 20 && d == 30) {
+if (c === 20 && d === 30) {
     console.log(`operator AND: Passed`);
 } else {
     console.log(`operator AND: Failed`);
 }
 
-if (c == 20 || d == 30+1) {
+if (c === 20 || d === 30+1) {
     console.log(`operator AND: Passed`);
 } else {
     console.log(`operator AND: Failed`);
 }
 
-if (!(c == 20+1)) {
+/* eslint-disable no-negated-condition */
+if (!(c === 20+1)) {
     console.log(`operator NOT: Passed`);
 } else {
     console.log(`operator NOT: Failed`);
 }
 
-if (!(c == 20)) {
+if (!(c === 20)) {
     console.log(`operator NOT: Passed`);
 } else {
     console.log(`operator NOT: Failed`);
 }
 console.log("");
+/* eslint-enable no-negated-condition */
 
-c > 0 ? console.log(`${c} is Positive`) : console.log(`${c} is negative`);
+let result = c > 0 ? 'Positive' : 'Negative';
+console.log(`${c} is ${result}`);
 
 c = -c;
-c > 0 ? console.log(`${c} is Positive`) : console.log(`${c} is negative`);
+result = c > 0 ? 'Positive' : 'Negative';
+console.log(`${c} is ${result}`);
