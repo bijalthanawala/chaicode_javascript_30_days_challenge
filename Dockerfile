@@ -20,5 +20,3 @@ RUN echo -e '// eslint.config.mjs'                  '\n' \
 RUN npm install --save-dev eslint @eslint/js
 
 ENTRYPOINT ["npx", "eslint"]
-
-# docker run --rm --volume $(pwd):/home/node/js bijalatdocker/node_eslint /home/node/js/*.js
